@@ -7,14 +7,16 @@
 #### Table of contents
 @snapend
 
-@snap[west]
+@snap[west span-55]
 @ul[spaced text-white]
+
 - User defined types
 - Special member functions
 - Conversions
 - Operator overloading
 - Types of inheritance
 - Compiler optimizations
+
 @ulend
 @snapend
 
