@@ -1,10 +1,20 @@
-# Let's Get Started
+# C++
+## introduction
 
 ---
 
-## Add Some Slide Candy
+@snap[north-west]
+#### Table of contents
+@snapend
 
-![](assets/img/presentation.png)
+@snap[west span-55]
+@ul[spaced text-white]
+- Aspects of inheritance
+- 
+- 
+- 
+@ulend
+@snapend
 
 ---
 @title[Customize Slide Layout]
