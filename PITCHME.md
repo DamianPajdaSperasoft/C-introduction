@@ -3,16 +3,18 @@
 
 ---
 
-@snap[north-west]
+@snap[north-west span-5]
 #### Table of contents
 @snapend
 
-@snap[west span-55]
+@snap[west span-5]
 @ul[spaced text-white]
-- Aspects of inheritance
-- 
-- 
-- 
+- User defined types
+- Special member functions
+- Conversions
+- Operator overloading
+- Types of inheritance
+- Compiler optimizations
 @ulend
 @snapend
 
