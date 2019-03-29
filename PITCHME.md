@@ -3,11 +3,11 @@
 
 ---
 
-@snap[north-west span-5]
+@snap[north-west]
 #### Table of contents
 @snapend
 
-@snap[west span-5]
+@snap[west]
 @ul[spaced text-white]
 - User defined types
 - Special member functions
