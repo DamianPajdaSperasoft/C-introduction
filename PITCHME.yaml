@@ -5,13 +5,13 @@
 # Theme Setting
 # Doc: https://gitpitch.com/docs/settings/theme
 #
-theme : simple
+theme : black
 
 #
 # Theme-Override Setting
 # Doc: https://gitpitch.com/docs/settings/custom-theme
 #
-theme-override: assets/css/PITCHME.css
+#theme-override: assets/css/PITCHME.css
 
 #
 # Logo Setting
@@ -42,6 +42,6 @@ published : true
 # Twitter Card Settings [Pro Only]
 # Doc: https://gitpitch.com/docs/settings/twitter-card
 #
-title : "GitPitch In 60 Seconds"
-description : "A short tutorial introducing the power and simplicity of GitPitch, the markdown presentation service on Git."
+title : "C++ - introduction"
+description : "This is a first part of C++ course"
 thumbnail : https://gitpitch.com/gpimg/tutorial-thumb.png
