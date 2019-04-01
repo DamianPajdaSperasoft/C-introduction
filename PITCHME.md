@@ -20,15 +20,38 @@
 @ulend
 @snapend
 
----
++++
 @title[Customize Slide Layout]
 
-@snap[west span-50]
-## Customize Slide Content Layout
+@snap[north span-100]
+## User defined types
 @snapend
 
-@snap[east span-50]
-![](assets/img/presentation.png)
+@snap[south span-100]
+```cpp
+union Foo
+{
+	float f;
+	int i;
+	char ch[4];
+};
+
+class Bar 
+{
+private:
+	float f;
+	int i;
+	char ch[4];
+};
+
+struct Baz
+{
+	float f;
+	int i;
+	char ch[4];
+};
+
+```
 @snapend
 
 ---?color=#E58537 
