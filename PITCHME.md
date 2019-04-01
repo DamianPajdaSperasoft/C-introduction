@@ -67,7 +67,7 @@ Unions
 @ulend
 @snapend
 
-@snap[east span-50]
+
 ```cpp
 union S
 {
@@ -110,7 +110,7 @@ int main()
 @[1-16]
 @[18-35]
 
-@snapend
+
 
 ---?color=#E58537 
 @title[Add A Little Imagination]
