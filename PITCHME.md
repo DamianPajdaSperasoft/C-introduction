@@ -67,6 +67,7 @@ Unions
 @ulend
 @snapend
 
++++
 
 ```cpp
 union S
@@ -78,21 +79,27 @@ union S
  
 int main()
 {
-    S s = {0x12345678}; // initializes the first member, s.n is now the active member
-    // at this point, reading from s.s or s.c is undefined behavior
+    S s = {0x12345678}; // initializes the first member, 
+	//s.n is now the active member
+    //at this point, reading from s.s or s.c is undefined behavior
     std::cout << std::hex << "s.n = " << s.n << '\n';
     s.s[0] = 0x0011; // s.s is now the active member
-    // at this point, reading from n or c is UB but most compilers define it
-    std::cout << "s.c is now " << +s.c << '\n' // 11 or 00, depending on platform
-              << "s.n is now " << s.n << '\n'; // 12340011 or 00115678
+    // at this point, reading from n or c is UB 
+	//but most compilers define it
+    std::cout << "s.c is now " << +s.c << '\n' 
+			  // 11 or 00, depending on platform
+              << "s.n is now " << s.n << '\n'; 
+			  // 12340011 or 00115678
 }
 
 union S
 {
     std::string str;
     std::vector<int> vec;
-    ~S() {} // needs to know which member is active, only possible in union-like class 
-};          // the whole union occupies max(sizeof(string), sizeof(vector<int>))
+    ~S() {} // needs to know which member is active, 
+			//only possible in union-like class 
+};          
+// the whole union occupies max(sizeof(string), sizeof(vector<int>))
  
 int main()
 {
