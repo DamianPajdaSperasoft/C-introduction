@@ -51,9 +51,9 @@ struct Baz
 	char ch[4];
 };
 ```
-@[1-6](Union)
-@[8-14](Class)
-@[16-21](Struct)
+@[1-6]
+@[8-14]
+@[16-21]
 
 ---?color=#E58537 
 @title[Add A Little Imagination]
