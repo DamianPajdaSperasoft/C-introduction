@@ -27,7 +27,7 @@
 ## User defined types
 @snapend
 
-@snap[south span-100]
+
 ```cpp
 union Foo
 {
@@ -50,9 +50,10 @@ struct Baz
 	int i;
 	char ch[4];
 };
-
 ```
-@snapend
+@[1]
+@[2]
+@[3]
 
 ---?color=#E58537 
 @title[Add A Little Imagination]
