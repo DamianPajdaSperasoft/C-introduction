@@ -68,10 +68,12 @@ Unions
 @snapend
 
 +++?code=code/simple_union.cpp&lang=cpp&title=Simple Union
-@[1-21]
+@[1-6]
+@[8-21]
 
 +++?code=code/non-trivial_union.cpp&lang=cpp&title=Non-Trivial Union
-@[1-21]
+@[1-8]
+@[10-21]
 
 
 
