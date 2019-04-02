@@ -48,8 +48,8 @@ There are six:
 ## And seventh...
 
 +++ 
-## And seventh...
 
+## And seventh...
 ### Deleting destructor
 
 +++
