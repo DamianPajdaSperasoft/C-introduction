@@ -47,6 +47,9 @@ There are six:
 +++ 
 ## And seventh...
 
++++ 
+## And seventh...
+
 ### Deleting destructor
 
 +++
@@ -56,7 +59,6 @@ class Base
 {
   public:
   virtual ~Base(){}
-  
 };
 
 class Foo : public Base
@@ -180,9 +182,9 @@ vtable for Base:
         .quad   Base::~Base() [base object destructor]
         .quad   Base::~Base() [deleting destructor]
 ```
-@[96-100]
 @[102-106]
-@[83]
+@[96-100]
+@[83-95]
 @[64-76]
 ---?color=#E58537 
 @title[Add A Little Imagination]
