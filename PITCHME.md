@@ -11,7 +11,7 @@
 @ul[spaced text-white]
 
 - Special member functions
-- Allocation
+- Allocation and alignment
 - Conversions
 - Operator overloading
 - Types of inheritance
@@ -45,11 +45,13 @@ There are six:
 
 
 +++ 
+@snap[north span-100]
 ## And seventh...
-
+@snapend
 +++ 
-
+@snap[north span-100]
 ## And seventh...
+@snapend
 ### Deleting destructor
 
 +++
@@ -186,32 +188,134 @@ vtable for Base:
 @[96-100]
 @[83-95]
 @[64-76]
----?color=#E58537 
-@title[Add A Little Imagination]
+
++++
+## So what is going on while deleting polymorphic derived object?
+@snap[center span-100]
+@ol
+1. Virtual deleting destructor is called
+2. Base object destructor is called
+3. Base class' base object destructor is called
+4. Derived class' operator delete is called
+@olend
+@snapend
+
+---
 
 @snap[north-west]
-#### Add a splash of @color[cyan](**color**) and you are ready to start presenting...
+#### Table of contents
 @snapend
 
 @snap[west span-55]
 @ul[spaced text-white]
-- You will be amazed
-- What you can achieve
-- *With a little imagination...*
-- And **GitPitch Markdown**
+
+- Special member functions
+- Allocation and alignment
+- Conversions
+- Operator overloading
+- Types of inheritance
+- Compiler optimizations
+
 @ulend
 @snapend
 
-@snap[east span-45]
-@img[shadow](assets/img/conference.png)
-@snapend
++++
+## Data Alignment
 
----?image=assets/img/presenter.jpg
+> Data alignment means putting
+> the data at a memory offset equal to some multiple of the word size, which increases the
+> system's performance due to the way the CPU handles memory.
 
-@snap[north span-100 headline]
-## Now It's Your Turn
-@snapend
++++
+## Data alignment
 
-@snap[south span-100 text-06]
-[Click here to jump straight into the interactive feature guides in the GitPitch Docs @fa[external-link]](https://gitpitch.com/docs/getting-started/tutorial/)
+```cpp
+struct A
+{
+	char c1;
+	int a1;
+	char c2;
+	int a2;
+};
+//sizeof(A) = 16
+//alignof(A) = 4
+
+struct A
+{
+	char c1; //1 byte
+	char padding1[3]; //3 bytes padding
+	int a1; //4 bytes
+	char c2; //1 byte
+	char padding2[3]; //3 bytes padding
+	int a2; //4 bytes
+};
+```
+@[1-9]
+@[11-19]
+
++++
+
+## Data alignment
+
+```cpp
+struct B
+{
+	char c1;
+	char c2;
+	int a1;
+	int a2;
+};
+//sizeof(B) = 12
+//alignof(B) = 4
+
+struct B
+{
+	char c1; //1 byte
+	char c2; //1 byte
+	char padding[2]; //2 bytes padding
+	int a1; //4 bytes
+	int a2; //4 bytes
+};
+```
+@[1-9]
+@[11-18]
+
++++
+
+## Data alignment
+
+```cpp
+#pragma pack(push, 1)
+struct C
+{
+	char c1;
+	int a1;
+	char c2;
+	int a2;
+};
+#pragma pack(pop)
+
+//sizeof(C) = 10
+//alignof(B) = 1
+
+struct C
+{
+	char c1; //1 byte
+	char c2; //1 byte
+	int a1; //4 bytes
+	int a2; //4 bytes
+};
+```
+@[1-12]
+@[14-20]
+
++++
+## Data alignment
+
+@snap[west span-55]
+@ul[text-white]
+- order of members matters
+- using #pragma pack may harm the performance
+- know memory alignment of your target architecture
+@ulend
 @snapend
