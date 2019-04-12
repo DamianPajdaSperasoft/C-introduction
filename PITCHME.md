@@ -193,10 +193,10 @@ vtable for Base:
 ## So what is going on while deleting polymorphic derived object?
 @snap[center span-100]
 @ol
-- 1. Virtual deleting destructor is called
-- 2. Base object destructor is called
-- 3. Base class' base object destructor is called
-- 4. Derived class' operator delete is called
+- Virtual deleting destructor is called
+- Base object destructor is called
+- Base class' base object destructor is called
+- Derived class' operator delete is called
 @olend
 @snapend
 
@@ -310,7 +310,7 @@ struct C
 @[14-20]
 
 +++
-@snap[north]
+@snap[north span-55]
 ## Data alignment
 @snapend
 
