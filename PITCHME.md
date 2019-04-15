@@ -20,6 +20,23 @@
 @ulend
 @snapend
 
+---
+
+@snap[north-west]
+#### Table of contents
+@snapend
+
+@snap[west span-55]
+
+- Special member functions [text-yellow]
+- Allocation and alignment
+- Conversions
+- Operator overloading
+- Types of inheritance
+- Compiler optimizations
+
+@snapend
+
 +++
 @title[Special member functions]
 
@@ -207,16 +224,15 @@ vtable for Base:
 @snapend
 
 @snap[west span-55]
-@ul[spaced text-white]
 
 - Special member functions
-- Allocation and alignment
+- Allocation and alignment [text-yellow]
 - Conversions
 - Operator overloading
 - Types of inheritance
 - Compiler optimizations
 
-@ulend
+
 @snapend
 
 +++
