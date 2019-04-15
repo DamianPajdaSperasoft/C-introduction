@@ -7,7 +7,6 @@
 #### Table of contents
 @snapend
 
-@snap[west span-55]
 @ul[spaced text-white]
 
 - Special member functions
@@ -18,7 +17,6 @@
 - Compiler optimizations
 
 @ulend
-@snapend
 
 ---
 
@@ -26,16 +24,14 @@
 #### Table of contents
 @snapend
 
-@snap[west span-55]
 
-- Special member functions [text-yellow]
+- <font color="yellow">Special member functions</font>
 - Allocation and alignment
 - Conversions
 - Operator overloading
 - Types of inheritance
 - Compiler optimizations
 
-@snapend
 
 +++
 @title[Special member functions]
